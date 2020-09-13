@@ -80,7 +80,7 @@ footer {
     transform: translateX(-100%);
     transition: transform 0.5s ease-out;
     z-index: 10;
-    width: 8%;
+    width: 10%;
 }
 
 .footer_ul {
@@ -102,6 +102,8 @@ footer {
     text-decoration: none;
     list-style: none;
     color: white;
+    font-size: 22px;
+    text-align: center;
 }
 
 .toggle {
@@ -341,6 +343,7 @@ section {
 }
 
 #language .language-column {
+    padding-top: 20px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -409,6 +412,12 @@ section {
 
 #achievement .content_wrapper {
     width: 60%;
+}
+
+#achievement .content_wrapper h1 {
+    font-size: 50px;
+    position: relative;
+    padding-bottom: 80px;
 }
 
 #achievement .achievement-grid {
@@ -657,7 +666,7 @@ input {
     }
     .achieve-img-wrapper {
         position: relative;
-        min-height: 150px;
+        min-height: 100px;
         width: 50px;
         justify-items: center
     }
