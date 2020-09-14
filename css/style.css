@@ -278,13 +278,29 @@ section {
 #aboutme .content_wrapper .aboutme-content {
     display: flex;
     width: 50%;
-    height: 80%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-#aboutme .content_wrapper .aboutme-content h1 {
-    align-self: center;
+.aboutme-content .aboutme-typing {
+    position: relative;
+    font-size: 25px;
+}
+
+.aboutme-content span {
+    font-size: 30px;
+}
+
+.aboutme-content .aboutme-typing::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    right: -10px;
+    top: 5px;
+    background-color: white;
+    animation: blink 1s infinite ease;
 }
 
 #aboutme .content_wrapper .img-wrapper {
@@ -593,12 +609,15 @@ input {
         width: 50%;
         display: flex;
         position: relative;
-        margin-top: 150px;
     }
     #aboutme .content_wrapper .aboutme-content {
-        height: 40%;
+        margin-top: 100px;
+        width: 100%;
     }
-    .img-wrapper::before {
+    #aboutme .content_wrapper .aboutme-content .aboutme-typing {
+        font-size: 20px;
+    }
+    #aboutme .img-wrapper::before {
         content: "";
         position: absolute;
         top: -20px;

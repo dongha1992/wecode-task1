@@ -4,7 +4,32 @@ const footer = document.querySelector("footer")
 const sections = document.querySelectorAll(".section_wrapper section")
 const anchor = document.querySelectorAll(".timeline_bar a")
 const textWrap = document.querySelectorAll(".text_content .text")
+const aboutMe = document.querySelector(".aboutme-typing")
 
+const texts = ["김동하 입니다.", "작가입니다.", "슈퍼 프리랜서를 꿈꿉니다."]
+
+let cnt = 0;
+let index = 0;
+let currentText = "";
+let letter = ""
+
+function type() {
+    if (cnt === texts.length) {
+        cnt = 0
+    }
+    currentText = texts[cnt]
+    letter = currentText.slice(0, index++)
+    aboutMe.textContent = letter
+    if (letter.length === currentText.length) {
+        cnt++
+        index = 0;
+    }
+
+    setTimeout(type, 600)
+
+}
+
+type()
 
 
 
@@ -13,7 +38,6 @@ const textWrap = document.querySelectorAll(".text_content .text")
 function scrollAppear() {
 
     textWrap.forEach(target => {
-        console.log(target)
 
         window.addEventListener("scroll", function() {
             let screenPos = window.innerHeight;
