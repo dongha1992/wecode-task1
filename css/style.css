@@ -556,6 +556,10 @@ input {
         background-color: white;
         animation: blink 1s infinite ease;
     }
+    #aboutme .content_wrapper .aboutme-content {}
+    #aboutme .content_wrapper .aboutme-content .aboutme-typing {
+        font-size: 20px;
+    }
     .timeline_bar {
         position: fixed;
         width: 100%;

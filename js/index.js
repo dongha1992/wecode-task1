@@ -6,7 +6,7 @@ const anchor = document.querySelectorAll(".timeline_bar a")
 const textWrap = document.querySelectorAll(".text_content .text")
 const aboutMe = document.querySelector(".aboutme-typing")
 
-const texts = ["김동하 입니다.", "작가입니다.", "슈퍼 프리랜서를 꿈꿉니다."]
+const texts = ["김동하 입니다.", "작가입니다.", "슈퍼 프리랜서를 꿈꿉니다.", "다정한 유용함을 좋아합니다."]
 
 let cnt = 0;
 let index = 0;
@@ -24,9 +24,7 @@ function type() {
         cnt++
         index = 0;
     }
-
     setTimeout(type, 600)
-
 }
 
 type()
